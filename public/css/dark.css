@@ -1,0 +1,46 @@
+body.dark{
+    background-color: #151521;
+    color: #fff;
+}
+
+.dark #menu{ 
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.dark .containerInicial{
+    background: #1e2270;
+}
+
+.dark #menu a{
+    color: #2f8ed6;
+    text-shadow: 0px 0px 15px #00213a9a;
+}
+
+.dark #menu a:hover {
+  color: #56b0f5;
+  text-shadow: 0 0 20px #56b0f5;
+}
+
+.dark #menu a::after {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 3%,  #366c95 68%, #56b0f5 97%);
+}
+
+/* INICIAL */
+
+.dark #wave{
+    background: url(../img/waveDark.png);
+}
+
+.dark .textoInicio{
+    color: #fff;
+}
+
+/* PROJETOS */
+
+.dark .cardProjeto{
+    border: 2px solid #383838;
+}
+
+.dark .tituloPojetos{
+    color: #95cffd;
+}

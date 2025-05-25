@@ -1,0 +1,106 @@
+.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tituloPojetos{
+    font-size: 50px;
+    margin: 40px;
+    color: #00213a;
+}
+
+.cardProjeto{
+    width: 70%;
+    height: 30vw;
+    background-color: yellowgreen;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../img/mequi.png);
+    background-size: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+    transition: all .5s;
+}
+
+.cardProjeto:hover{
+    animation: projetos 20s linear;
+}
+
+.content{
+    margin: 20px;
+    height: auto;
+    width: 40%;
+    padding: 20px;
+}
+
+.content h1{
+    color:  #95cffd;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.content p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+@keyframes projetos{
+    0%{
+        background-position-y: 0%;
+    }
+
+    90%{
+        background-position-y: 100%;
+    }
+
+    100%{
+        background-position-y: 0%;
+    }
+}
+
+.content button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.content button:hover {
+  letter-spacing: 2px;
+  background-color: #1e2270;
+  color: #ffffff;
+  box-shadow: #1e2270 0px 5px 20px 0px;
+}
+
+.content button:active {
+  letter-spacing: 2.5px;
+  background-color: #00213a;
+  color: #ffffff;
+  box-shadow: #1e2270 0px 0px 0px 0px;
+
+  transition: 100ms;
+}
+
+.content button a{
+    text-decoration: none;
+    color: #1e2270;
+}
+
+.content button:hover a{
+    color: #fff;
+}
+
