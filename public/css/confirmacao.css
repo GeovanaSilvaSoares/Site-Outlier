@@ -10,7 +10,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(0deg,rgba(51, 85, 112, 1) 0%, rgba(177, 204, 226, 1) 100%);
+    
+    background: linear-gradient(0deg,rgba(64, 98, 124, 1) 40%, rgba(30, 34, 112, 1) 100%);
     text-align: center;
 }
 
@@ -24,7 +25,7 @@ body {
     height: 80%;
     padding: 5%;
     background-color: #fff;
-    color: rgba(51, 85, 112, 1);
+    color: rgba(30, 34, 112, 1);
     font-family: "Instrument Sans", sans-serif;
     box-shadow: 10px 10px 50px -7px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 50px -7px rgba(0,0,0,0.75);
