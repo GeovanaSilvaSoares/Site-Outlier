@@ -1,37 +1,55 @@
 
 ///////////////////////////////////////////////////////////////
-// Carrossel de apresentação da equipe 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+let grupoTamanho = 5;
+let slidesGrupos = [];
 
-// Controles de próximo e anterior
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+window.addEventListener("load", setupSlides);
+window.addEventListener("resize", setupSlides);
+
+function setupSlides() {
+  const container = document.querySelector(".cardsEquipe");
+  const todosCards = Array.from(container.querySelectorAll(".slides"));
+
+  // Limpa container
+  container.innerHTML = "";
+
+  // Define quantos cards cabem na tela
+  const width = window.innerWidth;
+  if (width <= 500) grupoTamanho = 1;
+  else if (width <= 800) grupoTamanho = 2;
+  else if (width <= 1200) grupoTamanho = 3;
+  else grupoTamanho = 5;
+
+  // Agrupa os cards
+  slidesGrupos = [];
+  for (let i = 0; i < todosCards.length; i += grupoTamanho) {
+    const grupoDiv = document.createElement("div");
+    grupoDiv.classList.add("slide-group");
+    grupoDiv.style.display = "none"; // esconde por padrão
+
+    for (let j = i; j < i + grupoTamanho && j < todosCards.length; j++) {
+      grupoDiv.appendChild(todosCards[j]);
+    }
+
+    container.appendChild(grupoDiv);
+    slidesGrupos.push(grupoDiv);
+  }
+
+  slideIndex = 0;
+  showSlides(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+// Botões de avançar e voltar
+function plusSlides(n) {
+  slideIndex += n;
+  if (slideIndex < 0) slideIndex = slidesGrupos.length - 1;
+  if (slideIndex >= slidesGrupos.length) slideIndex = 0;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("org5"); 
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "flex";
-  
-  if (dots.length > 0) {
-    dots[slideIndex - 1].className += " active";
+  for (let i = 0; i < slidesGrupos.length; i++) {
+    slidesGrupos[i].style.display = i === n ? "flex" : "none";
   }
 }
