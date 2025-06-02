@@ -22,7 +22,7 @@ const transportador = nodemailer.createTransport({
     pass: 'jmhagqzgurfimopl',
   },
   tls: {
-    rejectUnauthorized: false, // <--- IGNORA o erro de certificado
+    rejectUnauthorized: false, 
   },
 });
 
