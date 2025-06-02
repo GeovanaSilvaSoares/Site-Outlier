@@ -6,10 +6,6 @@ body{
   font-family: "Instrument Sans", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 
 /* MENU */
 
@@ -36,8 +32,12 @@ html {
 }
 
 #menu .logo{
-  width: 200px;
-  height: 70px;
+  background: url(../img/5.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 220px;
+  height: 50px;
   margin-right: 200px;
   padding: 10px;
 }
@@ -73,13 +73,6 @@ html {
 
 }
 
-@media(max-width: 912px){
-
-#menu .logo{
-  margin-right: 20px;
-}
-
-}
 @media(max-width: 912px){
 
 #menu .logo{
@@ -336,10 +329,6 @@ html {
 
   .logo img{
     height: 30px;
-  }
-
-  .navLink{
-    font-size: 0.83rem;
   }
 
 

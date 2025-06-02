@@ -10,17 +10,27 @@
 }
 
 /************************************************************************************/
-.equipe {
-    display: block;
+.cardsEquipe {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: auto;
-    padding: 5%;
+    overflow: hidden;
+    height: 400px;
+    justify-content: center;
 }
 
-.org5 {
-    display: flex;
-    align-items: center;
+.slide-group {
+    display: none;
+    flex-wrap: nowrap;
     justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.slides {
+    flex: 1 1 200px;
+    max-width: 200px;
+    min-width: 180px;
 }
 
 
@@ -111,6 +121,8 @@
     height: 30px;
     margin-left: 75%;
     z-index: 0;
+    max-width: 50px;
+    min-width: 30px;
 }
 
 .nomeEquipe {
@@ -147,7 +159,7 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
     justify-content: center;
-    margin-top: -16%;
+    margin-top: -250px;
     color: #1c399a;
     text-shadow: 2px 2px 2px #8a8ed9;
     
@@ -281,7 +293,7 @@ ul {
 }
 
 .dark .nomeEquipe {
-    color: #1e2270;
+    color: #5477eb;
 }
 
 .dark .cargo {
@@ -301,14 +313,31 @@ ul {
 
 .dark .redesSociais .icon-content a {
     color: #211e2b;
-    background-color: #1e2270;
-    border: 2px solid #1e2270;
+    background-color: #5477eb;
+    border: 2px solid #5477eb;
 }
 
 .dark .redesSociais .icon-content a:hover {
-    color: #1e2270;
+    color: #5477eb;
 }
   
 .dark .redesSociais .icon-content a .filled {
     background-color: #211e2b;
+}
+
+/*****************************************************************/
+/* RESPOSIVIDADE - Fale Conosco */
+
+/* Responsividade para tablets (até 1024px) 
+@media (max-width: 1024px) {
+  .quadrado {
+    margin-left: 80%;
+}
+}
+
+/* Responsividade para celulares (até 768px) 
+@media (max-width: 768px) {
+    .quadrado {
+        margin-left: 80%;
+    }
 }

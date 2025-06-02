@@ -21,7 +21,6 @@ body{
     width: 50%;
     height: 78%;
     border-radius: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +56,7 @@ body{
     background: linear-gradient(0deg,rgba(64, 98, 124, 1) 40%, rgba(30, 34, 112, 1) 100%);
     border-radius: 50px;
     width: 45%;
-    height: 110%;
+    height: 610px;
     margin-right: 20px;
     border-bottom: 2px solid #1e2270;
     box-shadow: 10px -2px 53px -3px rgba(0,0,0,0.72);

@@ -16,7 +16,8 @@
     text-align: center;
     align-items: center;
     width: 90%;
-    height: 40vw;
+    height: auto;
+    margin: auto;
 }
 
 .sobreNosContainer1 .img{
@@ -32,7 +33,8 @@
     animation: bordasFlutuantes 10s ease-in-out infinite;
     margin: 50px;
     border: 1px solid rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: #00213aa7 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
 }
 
 @keyframes bordasFlutuantes{
@@ -50,7 +52,7 @@
 }
 
 .sobreNosContainer1 .introducao{
-    width: 50%;
+    width: 60%;
     padding: 20px;
     text-align: justify;
 }
@@ -90,6 +92,7 @@
   text-align: center;
   color: #fff;
   transition: all 0.3s ease;
+  flex: 1 0 280px;
 }
 
 .cardValores:hover {
@@ -140,53 +143,3 @@
   display: block;
   font-size: 14px;
 }
-
-
-/* .cardsValores{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.valores1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.valores2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.cardsValores .valor{
-    width: 25%;
-    padding: 30px;
-    border: solid 1px #ecebeb;
-}
-
-.cardsValores .valor:hover{
-    background-color:  #1e2270;
-    color: #fff;
-    transition: 0.7s;
-}
-
-.cardsValores .valor:hover h2{
-    color: #fff;
-    transition: 0.7s ease-in-out;
-}
-
-.cardsValores .valor h2{
-    color: #1c399a;
-    font-family: verdana;
-    margin: 7px;
-    font-size: 20px;
-}
-
-
-.cardsValores .valor p{
-    font-size: 13px;
-    width: 100%;
-} */
